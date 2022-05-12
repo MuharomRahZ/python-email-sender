@@ -27,6 +27,7 @@ def showList():
         print()
     except Exception as exception:
         print("Error: %s!\n" % exception)
+        file.close()
         print()
 
 #main-program / sending email part

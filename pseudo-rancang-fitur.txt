@@ -1,8 +1,8 @@
 $Penambahan fitur/fungsi:
 #fitur menampilkan list receiver from .txt
     initiate (try):
-        open file .txt
-        receiver = reader(open .txt)
+        file = open file.txt(r)
+        receiver = reader(file)
         if receiver = "":
             print('list kosong')
         else:
@@ -14,7 +14,21 @@ $Penambahan fitur/fungsi:
     exception Exception as exc:
         print('error:', exc)
 
+
 #fitur input receiver to .txt
+    initiate (try):
+        file = open file.txt(r)
+        nama = input(str("nama"))
+        email = input(str("email))
+        if file.read = "":
+            file = open file.txt(a)
+            file.write(nama, email)
+            print('berhasil diinput')
+        else:
+            print('data telah ada!')
+    exception Exception as exc:
+        print('error:', exc)
+
 
 #fitur hapus receiver from .txt (satu-per-satu)
 
