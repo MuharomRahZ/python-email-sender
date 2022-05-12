@@ -1,0 +1,19 @@
+$Penambahan fitur/fungsi:
+#fitur menampilkan list receiver from .txt
+
+#fitur input receiver to .txt
+
+#fitur hapus receiver from .txt
+
+#fitur input text / body email (sekedar input str / input to .txt)
+
+#fitur input attachment file (.docx, .pdf, .csv, .txt)
+
+
+$Opsi Menu:
+1. Tampil list receiver
+2. Input / Tambah receiver to list
+3. Delete receiver from list
+4. Input body message email (text only)
+(5. Input attachment)
+6. Send Email
