@@ -8,6 +8,27 @@ sent_subject = input(str("Masukkan subjek email: ")) #variabel subject
 sent_body = input(str("Masukkan isi pesan email: ")) #variabel body
 
 
+#functions - def
+#1. func menampilkan receiver list .txt
+def showList():
+    try:
+        file = open(r'C:\Users\ZAKI\Documents\AAA.Computing Projects\A.Zek-github-repositories-data\python-email-sender\receiver_list.txt', 'r')
+        receiver = csv.reader(file)
+        if file == '':
+            print("\nData masih kosong")
+        else:
+            print("\n===Daftar Receiver Email===")
+            print("\n")
+            for data in receiver:
+                print("nama = " + data[0])
+                print("email = " + data[1])
+                print("==================")
+        file.close()
+        print()
+    except Exception as exception:
+        print("Error: %s!\n" % exception)
+        print()
+
 #main-program / sending email part
 try:
     file = open(r'C:\Users\ZAKI\Documents\AAA.Computing Projects\A.Zek-github-repositories-data\python-email-sender\receiver_list.txt', 'r') #membuka file receiver_list.txt
