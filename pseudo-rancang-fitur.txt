@@ -1,9 +1,24 @@
 $Penambahan fitur/fungsi:
 #fitur menampilkan list receiver from .txt
+    initiate (try):
+        open file .txt
+        receiver = reader(open .txt)
+        if receiver = "":
+            print('list kosong')
+        else:
+            for x in receiver:
+                print('daftar receiver')
+                print('nama = ', x[0])
+                print('email = ', x[1])
+                print()
+    exception Exception as exc:
+        print('error:', exc)
 
 #fitur input receiver to .txt
 
-#fitur hapus receiver from .txt
+#fitur hapus receiver from .txt (satu-per-satu)
+
+#fitur overwrite (hapus / ulang secara keseluruhan) receiver from .txt
 
 #fitur input text / body email (sekedar input str / input to .txt)
 
@@ -14,6 +29,7 @@ $Opsi Menu:
 1. Tampil list receiver
 2. Input / Tambah receiver to list
 3. Delete receiver from list
-4. Input body message email (text only)
-(5. Input attachment)
-6. Send Email
+4. Overwrite list
+5. Input body message email (text only)
+(6. Input attachment)
+7. Send Email
