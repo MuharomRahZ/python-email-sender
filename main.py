@@ -9,13 +9,13 @@ sent_body = input(str("Masukkan isi pesan email: ")) #variabel body
 
 
 #functions - def
-#1. func menampilkan receiver list .txt
+#1. func menampilkan receiver di dalam list.txt
 def showList():
     try:
         file = open(r'C:\Users\ZAKI\Documents\AAA.Computing Projects\A.Zek-github-repositories-data\python-email-sender\receiver_list.txt', 'r')
         receiver = csv.reader(file)
         if file == '':
-            print("\nData masih kosong")
+            print("\n!!!Data masih kosong!!!")
         else:
             print("\n===Daftar Receiver Email===")
             print("\n")
@@ -23,6 +23,27 @@ def showList():
                 print("nama = " + data[0])
                 print("email = " + data[1])
                 print("==================")
+        file.close()
+        print()
+    except Exception as exception:
+        print("Error: %s!\n" % exception)
+        file.close()
+        print()
+
+
+#2. func input (new) receiver ke dalam list.txt 
+def inputReceiver():
+    try:
+        file = open(r'C:\Users\ZAKI\Documents\AAA.Computing Projects\A.Zek-github-repositories-data\python-email-sender\receiver_list.txt', 'r')
+        nama = input(str("Masukkan nama receiver: "))
+        email = input(str("Masukkan alamat email receiver: "))
+        # can't duplicate the same name+email
+        if file.read() == '':
+            file = open(r'C:\Users\ZAKI\Documents\AAA.Computing Projects\A.Zek-github-repositories-data\python-email-sender\receiver_list.txt', 'a')
+            file.write(nama+","+email)
+            print("Data Receiver berhasil ditambahkan!")
+        else:
+            print("Data telah ada di dalam list!")
         file.close()
         print()
     except Exception as exception:
